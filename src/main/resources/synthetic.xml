@@ -1,0 +1,52 @@
+<!--
+
+    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+    FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+
+-->
+<synthetic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.xebialabs.com/deployit/synthetic"
+           xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
+
+
+    <type type="cloudbolt.Task" extends="xlrelease.PythonScript" virtual="true">
+        <property name="server" category="input" label="Cloudbolt Authentication" referenced-type="cloudbolt.Server" kind="ci" required="true" description="Cloudbolt Authentication."/>
+        <property name="username" category="input" default="" required="false" description="Custom username to override global server configuration"/>
+        <property name="password" category="input" default="" required="false" password="true" description="Custom password to override global server configuration"/>
+        <property name="iconLocation" default="cloudbolt/cloudbolt.png" hidden="true"/>
+        <property name="scriptLocation" default="cloudbolt/CloudboltTask.py" hidden="true"/>
+        <property name="taskColor" hidden="true" default="#64c5c8"/>
+        <property name="waitTimeout" category="input" default="3600" description="Wait Timeout in secs" />
+        <property name="waitInterval" category="input" default="10" description="Wait Interval in secs" />
+        <property name="output" category="output" kind="string" size="large" label="Output" description="The output returned from execution of the Bitbucket task."/>
+    </type>
+
+
+    <type type="cloudbolt.ProvisionServer" extends="cloudbolt.Task" >
+        <property name="groupId" category="input" kind="integer" description=" Group Id ( Number )" />
+        <property name="ownerId" category="input" kind="integer" required="false" description="Owner Id ( Number )" />
+        <property name="envId" category="input" kind="integer" description="Environment Id ( Number)" />
+        <property name="hostname" category="input" required="false" description="Hostname to use" />
+        <property name="osBuildId" category="input" kind="integer" description="OS Build Id (Number)" />
+        <property name="parameters" category="input" kind="map_string_string" description="Key Value map of parameters" />
+        <property name="preconfigurations" category="input" required="false" kind="map_string_string" description="Key Value map of preconfiguration" />
+        <property name="appIds" category="input" required="false" description="List of space separated Ids" />
+        <property name="serverId" category="output" description="Server Id of provisioned Server" />
+    </type>
+
+    <type type="cloudbolt.DecommissionServer" extends="cloudbolt.Task" >
+        <property name="groupId" category="input" kind="integer" description=" Group Id ( Number )" />
+        <property name="envId" category="input" kind="integer" description="Environment Id ( Number)" />
+        <property name="serverId" category="input"  description="Server Id to decommission" />
+    </type>
+
+
+    <type type="cloudbolt.Server" extends="configuration.HttpConnection">
+        <property name="checkConfigurationPath" hidden="true" default="/api/v2/"/>
+        <property name="checkConfigurationContentType" hidden="true" default="application/json"/>
+        <property name="scriptLocation" hidden="true" default="configuration/HttpConnectionCheck.py"/>
+    </type>
+
+
+</synthetic>
