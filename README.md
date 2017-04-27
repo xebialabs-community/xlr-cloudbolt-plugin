@@ -12,7 +12,7 @@ This plugin offers an interface from XL Release to Cloudbolt.io Provisioning API
 
 [xlr-cloudbolt-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xlr-cloudbolt-plugin.svg?branch=master
 [xlr-cloudbolt-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xlr-cloudbolt-plugin
-[xlr-cloudbolt-plugin-codacy-image]: https://api.codacy.com/project/badge/Grade/0e664aaacd2f4010b091f0ef4ce1c7d0
+[xlr-cloudbolt-plugin-codacy-image]: https://api.codacy.com/project/badge/Grade/890de5bbae19495c9e8c8f9c36f40d4a
 [xlr-cloudbolt-plugin-codacy-url]: https://www.codacy.com/app/amitmohleji/xlr-cloudbolt-plugin
 [xlr-cloudbolt-plugin-code-climate-image]: https://codeclimate.com/github/xebialabs-community/xlr-cloudbolt-plugin/badges/gpa.svg
 [xlr-cloudbolt-plugin-code-climate-url]: https://codeclimate.com/github/xebialabs-community/xlr-cloudbolt-plugin
