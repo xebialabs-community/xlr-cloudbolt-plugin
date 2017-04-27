@@ -31,7 +31,7 @@ This plugin offers an interface from XL Release to Cloudbolt.io Provisioning API
 # Usage #
    
 * Setup the server configuration
-![](serverConfig.png)
+![](images/serverConfig.png)
 
 * Provision Server Task 
 ![](images/provision.png)
