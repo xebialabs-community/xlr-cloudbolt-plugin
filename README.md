@@ -41,4 +41,5 @@ This plugin offers an interface from XL Release to Cloudbolt.io Provisioning API
 
 # References #
 [CloudBolt API Docs](http://docs.cloudbolt.io/advanced/api/index.html)
+[Python samples used for building plugin](http://docs.cloudbolt.io/static/CloudBolt_API_Samples.zip)
 
